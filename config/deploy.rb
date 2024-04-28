@@ -60,6 +60,8 @@ set :default_env, {
   path: "/home/ec2-user/.rbenv/shims:$PATH" 
 }
 
+set :bundle_path, "/home/ec2-user/.rbenv/shims"
+
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
 
