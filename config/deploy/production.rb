@@ -49,12 +49,12 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
- server "13.231.164.59",
+ server "52.195.182.36",
    user: "ec2-user",
    roles: %w{web db app},
    ssh_options: {
      user: "ec2-user", # overrides user setting above
-     keys: %w(/home/aika/.ssh/id_rsa),
+     keys: %w(/home/aika/.ssh/dic_sample.pem),
      forward_agent: false,
      auth_methods: %w(publickey password)
 #     # password: "please use keys"
