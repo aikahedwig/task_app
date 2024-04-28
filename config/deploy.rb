@@ -55,8 +55,10 @@ end
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
+
 set :default_env, { 
-  path: "/home/aika/.rbenv/shims:/home/aika/.rbenv/bin:$PATH" 
+  path: "/home/ec2-user/.rbenv/shims:$PATH" 
 }
 
 # Default value for local_user is ENV['USER']
