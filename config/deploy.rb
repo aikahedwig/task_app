@@ -8,6 +8,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}   # 5
 set :keep_releases, 5   # 6
 set :rbenv_ruby, '3.0.1'    # 7
 set :log_level, :info   # 8
+set :bundle_path, "/home/ec2-user/.rvm/gems/ruby-3.0.1/bin"
 
 after 'deploy:published', 'deploy:seed'   # 9
 after 'deploy:finished', 'deploy:restart'   # 10
@@ -54,6 +55,9 @@ end
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :default_env, { 
+  path: "/home/aika/.rbenv/shims:/home/aika/.rbenv/bin:$PATH" 
+}
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
