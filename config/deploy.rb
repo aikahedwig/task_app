@@ -56,11 +56,11 @@ end
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 
-set :default_env, { 
+#set :default_env, { 
   path: "/home/ec2-user/.rbenv/shims:$PATH" 
-}
+#}
 
-set :bundle_path, "/home/ec2-user/.rbenv/shims"
+set :bundle_path, "/home/aika/.rbenv/shims"
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
